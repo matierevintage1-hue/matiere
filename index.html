@@ -71,7 +71,7 @@ header .logo small { font-size: 9px; letter-spacing: .6em; opacity: .8; padding-
 .rail .bar::before, .rail .bar::after { content: ""; position: absolute; top: -5px; width: 18px; height: 18px; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #FFF3D6, #C9A468 35%, #6E5230 75%, #3E2C18); box-shadow: 0 6px 8px rgba(34,11,18,.4); }
 .rail .bar::before { left: -6px; } .rail .bar::after { right: -6px; }
 .items { position: absolute; inset: 0; z-index: 3; }
-.item { position: absolute; left: 50%; top: 168px; width: min(28vw, 360px); transform-origin: 50% 30px; transition: transform 1s cubic-bezier(.2,.75,.15,1), opacity 1s, filter 1s; cursor: pointer; }
+.item { position: absolute; left: 50%; top: 168px; width: min(28vw, 360px, calc((100vh - 440px) * .76)); transform-origin: 50% 30px; transition: transform 1s cubic-bezier(.2,.75,.15,1), opacity 1s, filter 1s; cursor: pointer; }
 .item .swing { transform-origin: 50% 30px; }
 .item.active .swing { animation: swing 4.2s ease-in-out infinite; }
 .item.moving .swing { animation: settle 1.5s cubic-bezier(.3,.6,.2,1); }
@@ -165,7 +165,7 @@ body.detail .panel { transform: none; opacity: 1; pointer-events: auto; }
   .title { top: 92px; }
   .rail { top: 160px; }
   .rail .bracket { display: none; }
-  .item { top: 134px; width: 64vw; }
+  .item { top: 134px; width: min(64vw, calc((100vh - 400px) * .82)); }
   .caption { bottom: 60px; }
   .caption h2 { font-size: 20px; letter-spacing: .14em; }
   .arrow { top: 300px; width: 40px; height: 40px; }
